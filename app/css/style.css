@@ -1,6 +1,7 @@
 body {
   font-family: "Boogaloo", cursive;
 }
+/* Home page modification */
 .home {
   display: flex;
   min-height: 100vh;
@@ -17,6 +18,7 @@ body {
   text-align: center;
 }
 
+/* Survey page modification */
 .survey {
   position: relative;
   display: flex;
@@ -31,6 +33,11 @@ body {
   color: aliceblue;
 }
 
+h2 {
+  text-align: center;
+}
+
+/* Both home and survey page */
 footer {
   position: absolute;
   bottom: 0;
@@ -50,10 +57,7 @@ footer {
   color: white;
 }
 
-h2 {
-  text-align: center;
-}
-
+/* Modal Modifications */
 .modal-title {
   color: black;
 }
