@@ -1,0 +1,63 @@
+body {
+  font-family: "Boogaloo", cursive;
+}
+.home {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background: url(/luis-quintero-aoz8a7jO0QI-unsplash.jpg) no-repeat center
+    center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.jumbotron {
+  background: none;
+  text-align: center;
+}
+
+.survey {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background: url(/bruce-mars-ZXq7xoo98b0-unsplash.jpg) no-repeat center center
+    fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: aliceblue;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  background-color: #0c4370;
+  text-align: center;
+}
+#footer {
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px;
+  color: aliceblue;
+}
+#footer a {
+  color: white;
+}
+
+h2 {
+  text-align: center;
+}
+
+.modal-title {
+  color: black;
+}
+
+#newFriend {
+  color: black;
+}
