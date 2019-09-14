@@ -21,6 +21,7 @@ app.use(bodyParser.json());
 require("./app/routing/apiRoutes")(app);
 require("./app/routing/htmlRoutes")(app);
 
+//listen function to show which port our connection is set to.
 app.listen(PORT, function() {
   console.log("App is listening on PORT: " + PORT);
 });
