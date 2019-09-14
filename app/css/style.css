@@ -72,7 +72,7 @@ footer {
 }
 
 /* Spinner */
-.spinner {
+/* .spinner {
   width: 80px;
   height: 80px;
 
@@ -85,10 +85,10 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
-  margin: auto;
+  margin: auto; */
 
-  /* Animation */
-  animation: spin 2s infinite linear;
+/* Animation */
+/* animation: spin 2s infinite linear;
 }
 
 @keyframes spin {
@@ -117,4 +117,4 @@ footer {
   position: fixed;
   left: 0;
   top: 0;
-}
+} */
