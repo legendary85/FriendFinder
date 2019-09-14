@@ -19,6 +19,7 @@
   "homepage": "https://github.com/legendary85/FriendFinder#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "express-parser": "^1.0.0",
     "nodemon": "^1.19.2",
     "path": "^0.12.7"
   }
