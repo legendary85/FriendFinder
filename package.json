@@ -23,5 +23,6 @@
     "express-parser": "^1.0.0",
     "nodemon": "^1.19.2",
     "path": "^0.12.7"
-  }
+  },
+  "devDependencies": {}
 }

@@ -8,8 +8,8 @@ var app = express();
 var PORT = process.env.PORT || 8080;
 
 //used to access static CSS and Images files
-app.use(express.static(__dirname + "/app/css"));
-app.use(express.static("./app/images"));
+// app.use(express.static(__dirname + "/app/css"));
+// app.use(express.static("./app/images"));
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
