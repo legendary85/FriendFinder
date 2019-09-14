@@ -106,7 +106,7 @@ footer {
   }
 }
 .overlay.hidden {
-  animation: fadeOut 2s;
+  /* animation: fadeOut 2s; */
   animation-fill-mode: forwards;
 }
 
