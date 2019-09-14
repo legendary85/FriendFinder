@@ -25,15 +25,15 @@ module.exports = function(app) {
     var totalDifference = 0;
 
     //loop through the freinds array of objects to get each friends scores
-    for (var i = 0; i < friends.length - 1; i++) {
+    for (var i = 0; i < friends.length; i++) {
       console.log(friends[i].name);
       totalDifference = 0;
 
       //loop through the friends score and the users score and calculate the abs difference between the two and push
       //that to the total difference variable set above
-      for (var j = 0; j < 10; j++) {
+      for (var j = 0; j < friends[i].scores.length; j++) {
         //calculate the difference between the scores and sum them into the totalDiffernce
-        totalDifference = Math.abs(
+        var totalDifference = Math.abs(
           parseInt(userScores[j]) - parseInt(friends[i].scores[j])
         );
         //If the sum od differences is less then the difference of the current bestMatch

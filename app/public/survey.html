@@ -270,11 +270,15 @@
             
             // var currentURL = window.location.origin;
             //ajax call for receiving response after POST request
+            $('.overlay').removeClass('hidden')
             $.post("/api/friends", newUser, function(data) {
               $("#newFriend").text(data.name);
               $("#newFriendPhoto").attr("src", data.photo).addClass("img-fluid");
               //Show best match with modal
+              setTimeout(function(){
               $("#newFriendModal").modal("toggle");
+
+              },2000)
             });
             //if required field in missing, show alert
           } else {
