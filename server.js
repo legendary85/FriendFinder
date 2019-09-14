@@ -1,15 +1,25 @@
 //Dependencies
 var express = require("express");
-var expressParser = require("express-parser");
+var bodyParser = require("body-parser");
 var path = require("path");
 
-const app = express();
+var app = express();
 
 var PORT = process.env.PORT || 8080;
 
-app.get("/", function(req, res) {
-  res.send("Hello World");
-});
+//used to access static CSS and Images files
+app.use(express.static(__dirname + "/app/css"));
+app.use(express.static("./app/images"));
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: true }));
+
+// parse application/json
+app.use(bodyParser.json());
+
+//require API and HTML routes
+require("./app/routing/apiRoutes")(app);
+require("./app/routing/htmlRoutes")(app);
 
 app.listen(PORT, function() {
   console.log("App is listening on PORT: " + PORT);
