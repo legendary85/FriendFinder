@@ -198,9 +198,10 @@
       </div>
     </div>
 
-    <div class="overlay">
+    <!-- spinner loader  -->
+    <!-- <div class="overlay">
       <div class="spinner"></div>
-    </div>
+    </div> -->
 
       <footer>
         <div id="footer" class="container">
@@ -217,11 +218,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script type="text/javascript">
     $(document).ready(function(){
-      window.addEventListener("load", function(){
-        const loader = document.querySelector('.overlay');
-        loader.className += " hidden";
-      })
-
+   
       $("#submit").on("click", function(event) {
         event.preventDefault();
         //to validate form
@@ -270,7 +267,7 @@
             
             // var currentURL = window.location.origin;
             //ajax call for receiving response after POST request
-            $('.overlay').removeClass('hidden')
+           
             $.post("/api/friends", newUser, function(data) {
               $("#newFriend").text(data.name);
               $("#newFriendPhoto").attr("src", data.photo).addClass("img-fluid");
