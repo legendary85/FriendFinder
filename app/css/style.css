@@ -1,5 +1,6 @@
 body {
   font-family: "Playfair Display", serif;
+  /* overflow: hidden; */
 }
 /* Home page modification */
 .home {
@@ -68,4 +69,52 @@ footer {
 
 #newFriend {
   color: black;
+}
+
+/* Spinner */
+.spinner {
+  width: 80px;
+  height: 80px;
+
+  border: 2px solid #f3f3f3;
+  border-top: 3px solid #f25841;
+  border-radius: 100%;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  /* Animation */
+  animation: spin 2s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.overlay.hidden {
+  animation: fadeOut 2s;
+  animation-fill-mode: forwards;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  left: 0;
+  top: 0;
 }

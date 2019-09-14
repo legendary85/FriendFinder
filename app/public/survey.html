@@ -170,12 +170,15 @@
       >
         Submit
       </button>
-      
-      <!-- Modal added -->
     </div>
+
+
+
+
     <br>
     <br>
     <br>
+    <!-- Modal added -->
     <div id="newFriendModal" class="modal fade" role="dialog">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -194,6 +197,11 @@
         </div>
       </div>
     </div>
+
+    <div class="overlay">
+      <div class="spinner"></div>
+    </div>
+
       <footer>
         <div id="footer" class="container">
           <a href="/api/friends">API Friends List</a> |
@@ -209,6 +217,10 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script type="text/javascript">
     $(document).ready(function(){
+      window.addEventListener("load", function(){
+        const loader = document.querySelector('.overlay');
+        loader.className += " hidden";
+      })
 
       $("#submit").on("click", function(event) {
         event.preventDefault();
