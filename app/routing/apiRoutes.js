@@ -31,16 +31,17 @@ module.exports = function(app) {
 
       //loop through the friends score and the users score and calculate the abs difference between the two and push
       //that to the total difference variable set above
-      for (var j = 0; j < friends[i].scores.length; j++) {
+      var currentFriend = friends[i];
+      for (var j = 0; j < currentFriend.scores.length; j++) {
         //calculate the difference between the scores and sum them into the totalDiffernce
         var totalDifference = Math.abs(
-          parseInt(userScores[j]) - parseInt(friends[i].scores[j])
+          parseInt(userScores[j]) - parseInt(currentFriend.scores[j])
         );
         //If the sum od differences is less then the difference of the current bestMatch
         if (totalDifference <= bestMatch.friendDifference) {
           //Reset the bestMatch to be the new friend.
-          bestMatch.name = friends[i].name;
-          bestMatch.photo = friends[i].photo;
+          bestMatch.name = currentFriend.name;
+          bestMatch.photo = currentFriend.photo;
           bestMatch.friendDifference = totalDifference;
         }
         console.log();
